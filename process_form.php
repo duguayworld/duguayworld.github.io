@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     file_put_contents($filePath, $formData, FILE_APPEND | LOCK_EX);
 
     // Redirect to a thank you page or back to the form page
-    header("Location: thank_you.html");
+    header("Location: index.html");
     exit();
 } else {
     // Handle invalid requests
