@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+ <!-- Transparent menu bar at the bottom -->
+  <div class="menu-bar">
+    <!-- Add your menu items or links here -->
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+
+<div class="bg">
+    <h1>DEMO</h1>
+</div>
+              <!-- SECTION OF 5 CARDS BEGIN -->
+              
+  <h3> Weekly Deals </h3>
+<div class="container">
+    <div class="nft" id="productCard1">
+      <div class='main'>
+        <img class='tokenImage' src="media/gear.png" alt="NFT" />
+        <h2>Product Demo #1</h2>
+        <p class='description'>Here is a detailed description of the demo itself. Feel free to email me with any questions.</p>
+        <div class='tokenInfo'>
+          <div class="price" id="price">
+            <ins>◘</ins>
+            <!-- Display the product price in USD -->
+            <p>4,99$</p>
+          </div>
+          <div class="duration">
+            <ins>◷</ins>
+            <p>Unlimited</p>
+          </div>
+        </div>
+        <hr />
+        <div class='creator'>
+          <div class='wrapper'>
+            <img src="media/personal.png" alt="Creator" />
+          </div>
+          <p><ins>DEMO</ins>    BENJAMIN DUGUAY</p>
+        </div>
+        <button class="buy-now-button" onclick="openModal('productCard1')">Buy Now</button>
+      </div>
+    </div>
+
+     <div class="nft" id="productCard2">
+      <div class='main'>
+        <img class='tokenImage' src="media/gear.png" alt="NFT" />
+        <h2>Product Demo #2</h2>
+        <p class='description'>Here is a detailed description of the demo itself. Feel free to email me with any questions.</p>
+        <div class='tokenInfo'>
+          <div class="price" id="price">
+            <ins>◘</ins>
+            <!-- Display the product price in USD -->
+            <p>4,99$</p>
+          </div>
+          <div class="duration">
+            <ins>◷</ins>
+            <p>Unlimited</p>
+          </div>
+        </div>
+        <hr />
+        <div class='creator'>
+          <div class='wrapper'>
+            <img src="media/gear.png" alt="Creator" />
+          </div>
+          <p><ins>DEMO</ins>    BENJAMIN DUGUAY</p>
+        </div>
+        <button class="buy-now-button" onclick="openModal('productCard2')">Buy Now</button>
+      </div>
+    </div>
+    
+     <div class="nft" id="productCard3">
+      <div class='main'>
+        <img class='tokenImage' src="media/gear.png" alt="NFT" />
+        <h2>Product Demo #3</h2>
+        <p class='description'>Here is a detailed description of the demo itself. Feel free to email me with any questions.</p>
+        <div class='tokenInfo'>
+          <div class="price" id="price">
+            <ins>◘</ins>
+            <!-- Display the product price in USD -->
+            <p>4,99$</p>
+          </div>
+          <div class="duration">
+            <ins>◷</ins>
+            <p>Unlimited</p>
+          </div>
+        </div>
+        <hr />
+        <div class='creator'>
+          <div class='wrapper'>
+            <img src="media/personal.png" alt="Creator" />
+          </div>
+          <p><ins>DEMO</ins>    BENJAMIN DUGUAY</p>
+        </div>
+        <button class="buy-now-button" onclick="openModal('productCard3')">Buy Now</button>
+      </div>
+    </div>
+    
+     <div class="nft" id="productCard4">
+      <div class='main'>
+        <img class='tokenImage' src="media/gear.png" alt="NFT" />
+        <h2>Product Demo #4</h2>
+        <p class='description'>Here is a detailed description of the demo itself. Feel free to email me with any questions.</p>
+        <div class='tokenInfo'>
+          <div class="price" id="price">
+            <ins>◘</ins>
+            <!-- Display the product price in USD -->
+            <p>4,99$</p>
+          </div>
+          <div class="duration">
+            <ins>◷</ins>
+            <p>Unlimited</p>
+          </div>
+        </div>
+        <hr />
+        <div class='creator'>
+          <div class='wrapper'>
+            <img src="media/personal.png" alt="Creator" />
+          </div>
+          <p><ins>DEMO</ins>    BENJAMIN DUGUAY</p>
+        </div>
+        <button class="buy-now-button" onclick="openModal('productCard1')">Buy Now</button>
+      </div>
+    </div>
+    
+     <div class="nft" id="productCard5">
+      <div class='main'>
+        <img class='tokenImage' src="media/gear.png" alt="NFT" />
+        <h2>Product Demo #5</h2>
+        <p class='description'>Here is a detailed description of the demo itself. Feel free to email me with any questions.</p>
+        <div class='tokenInfo'>
+          <div class="price" id="price">
+            <ins>◘</ins>
+            <!-- Display the product price in USD -->
+            <p>4,99$</p>
+          </div>
+          <div class="duration">
+            <ins>◷</ins>
+            <p>Unlimited</p>
+          </div>
+        </div>
+        <hr />
+        <div class='creator'>
+          <div class='wrapper'>
+            <img src="media/personal.png" alt="Creator" />
+          </div>
+          <p><ins>DEMO</ins>    BENJAMIN DUGUAY</p>
+        </div>
+        <button class="buy-now-button" onclick="openModal('productCard5')">Buy Now</button>
+      </div>
+    </div>
+</div>
+
+
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Payment</h2>
+      <p>Complete your purchase with cryptocurrency.</p>
+      <p>Contact Email: duguay_world@outlook.com</p>
+      <h2>Bitcoin Adress</h2>
+      <img src="media/qrcode.png" alt="Creator" />
+      <div>
+      <button class="about-button" onclick="openAboutModal()">Product Details</button>
+
+
+ <!-- About Modal -->
+  <div id="aboutModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeAboutModal()">&times;</span>
+      <h2>Product Details</h2>
+      <p><ins>Bank Scans: </ins> Original .tiff scan of a fresh cheque. Account Active.</p>
+      <p><ins>Bank Draft Templates: </ins> High quality editable and accurate bank drafts templates. Make your own counterfeits.</p>
+      <p><ins>Custom Counterfeit Cheques: </ins> We make a custom counterfeit cheque with information given from you, from a previous purchase you have made of a .tiff Original Bank Scan.</p>
+      <p><ins>Drivers License Templates: </ins> High quality editable Canadian drivers license templates. </p>
+      <p><ins>Physical Drivers License: </ins> High quality Canadian counterfeit drivers license. The bar codes scans everywhere, the templates are accurate and the information is either provided from you or generated by us. </p>
+      <p><ins>Physical Cheques: </ins> A physical counterfeit cheque made by us with information provided from you. </p>
+      <div>
+      <p><ins>Procedures:</ins></p>
+      <div>
+      <p>You can contact us via email and we will send you custom payment information according to the product you need. You can also do your own calculations and send us the payment prior to receive your goods. We fill every order in the next 24 hours.</p>
+      <div>
+      <p> ***EXCEPT*** Physical products take up to 5 days to be shipped out. </p>
+      
+      <!-- ... (add more content as needed) ... -->
+    </div>
+  </div>
+  
+  
+  <script>
+    async function getBitcoinPrice() {
+      try {
+        const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+        const data = await response.json();
+        const bitcoinPrice = data.bitcoin.usd;
+        document.getElementById('bitcoinPrice').innerHTML = `Bitcoin Price: ${bitcoinPrice.toFixed(2)} USD`;
+      } catch (error) {
+        console.error('Error fetching Bitcoin price:', error.message);
+      }
+    }
+
+    function openModal(cardId) {
+      getBitcoinPrice();
+      document.getElementById('myModal').style.display = 'block';
+    }
+
+    function closeModal() {
+      document.getElementById('myModal').style.display = 'none';
+    }
+
+    function openAboutModal() {
+      document.getElementById('aboutModal').style.display = 'block';
+    }
+
+    function closeAboutModal() {
+      document.getElementById('aboutModal').style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>
+
