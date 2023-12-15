@@ -1,1 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Benjamin Duguay</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Include html2pdf library -->
+<script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('media/moi.png');
+  min-height: 100%;
+}
 
+    .w3-half img {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .w3-half img:hover {
+      transform: scale(1.1); /* Scale up on hover */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+    }
+    
+    .w3-half iframe {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .w3-half iframe:hover {
+      transform: scale(1.1); /* Scale up on hover */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+    }
+</style>
+</head>
+<body>
+
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:27%">
+  <div class="bgimg"></div>
+</nav>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2;max-width:40%" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Portfolio</a>
+    <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:10%">
+
+  <!-- Menu icon to open sidebar -->
+  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+  <!-- Header -->
+  <header class="w3-padding-large w3-container w3-center" style="padding:128px 16px" id="home">
+    <h1 class="w3-jumbo"><b>Benjamin Duguay</b></h1>
+    <p>Multi Talented Individual</p>
+    <button id="downloadButton" class="w3-button w3-light-grey w3-padding-large w3-margin-top">
+      <i class="fa fa-download"></i> Download Resume
+    </button>
+  </header>
+
+  <!-- Portfolio Section -->
+  <div class="w3-content" id="portfolio">
+    <h2 class="w3-text-grey">Portfolio</h2>
+    <hr class="w3-opacity">
+
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half w3-image w3-greyscale">
+        <a href="LarmesDeRasoir/Html/larmesderasoir.html">
+           <img src="media/book.png" alt="Book Image" style="width:100%">
+        </a>
+        <a href="Gallery/index.html">
+           <img src="media/wallpaper.png" style="width:100%">
+        </a>
+        <a href="Blanc/index.html">
+           <img src="media/blanc.png" style="width:100%">
+        </a>
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1686531825&color=%2387d7d7&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/dominionengine" title="Dominion Engine" target="_blank" style="color: #cccccc; text-decoration: none;">Dominion Engine</a> · <a href="https://soundcloud.com/dominionengine/trap-1" title="TRAP - 1" target="_blank" style="color: #cccccc; text-decoration: none;">TRAP - 1</a></div>
+         <a href="index.html">
+           <img src="media/cv.png" style="width:100%">
+        </a>
+      </div>
+
+      <div class="w3-half w3-image w3-greyscale">
+      <a href="DominionEngine/index.html">
+         <img src="media/music.png" style="width:100%">
+      </a>
+      <a href="Cards-Demo/index.html">
+         <img src="media/store.png" style="width:100%">
+      </a>
+      <a href="portfolio/Hotel/index.html">
+         <img src="media/hotel.png" style="width:100%">
+      </a>
+        <iframe width="100%" height="166" src="https://www.youtube.com/embed/L4ZLl0Bjq6s" title="Horror Ambient Music - CInematic - Hip-hop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <a href="https://github.com/paulgrey666">
+         <img src="media/github.png" style="width:100%">
+      </a>
+      </div>
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+    <!-- Skills Section -->
+<div class="w3-row w3-center w3-dark-grey w3-padding-16 w3-section">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">100+</span><br>
+        Icons
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">100+</span><br>
+        Graphics
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">100+</span><br>
+        Banners
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">500+</span><br>
+        Designs
+      </div>
+    </div>
+  <!-- End of Skills Section -->
+    <h2>About</h2>
+    <hr class="w3-opacity">
+    <p>Hello! I'm a multi-talented individual with a passion for creativity and technology. My diverse skill set includes artistic talent, HTML/CSS coding, front-end design, and proficiency in tools like Photoshop and Gimp. I'm equally comfortable working in Linux and Windows environments.
+
+      In addition to my technical skills, I'm also an author of the book <span class="highlight">"Larmes de Rasoirs"</span>, a captivating journey into the realms of storytelling. Beyond writing, I express my creativity through music composition and video editing, creating unique pieces from scratch.
+
+      I believe in the power of combining art and technology to bring ideas to life. Whether it's crafting visually appealing websites, writing compelling stories, or producing engaging multimedia content, I enjoy pushing the boundaries of what's possible.
+
+      Thank you for visiting, and feel free to explore my creations!
+    </p>
+    <h3 class="w3-padding-16">My Skills</h3>
+    <p class="w3-wide">Photo</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:95%">95%</div>
+    </div>
+    <p class="w3-wide">Web Design</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:85%">85%</div>
+    </div>
+    <p class="w3-wide">Photoshop</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">80%</div>
+    </div>
+    <p class="w3-wide">Music</p>
+    <div class="w3-light-grey">
+    <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">80%</div>
+    </div>
+    <p class="w3-wide">Video</p>
+    <div class="w3-light-grey">
+    <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">80%</div>
+    </div>
+    <p class="w3-wide">Html</p>
+    <div class="w3-light-grey">
+    <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">80%</div>
+    </div>
+    <p class="w3-wide">Css</p>
+    <div class="w3-light-grey">
+    <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">80%</div>
+    </div><br>
+
+    <div class="w3-row w3-center w3-dark-grey w3-padding-16 w3-section">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">14+</span><br>
+        Web Pages
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">10+</span><br>
+        Stores
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">1000+</span><br>
+        Pictures
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">100+</span><br>
+        Videos
+      </div>
+    </div>
+
+    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-download"></i> Download Resume
+    </button>
+
+    <!-- Testimonials -->
+    <h3 class="w3-padding-24">My Reputation</h3>
+    <img src="/w3images/avatar_smoke.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-text-black w3-margin-right">Chandler Bing.</span> Web Designer.</p>
+    <p>Jane Doe is just awesome. I am so happy to have met her!</p><br>
+   
+    <img src="/w3images/bandmember.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-text-black w3-margin-right">Chris Fox.</span> CEO at Mighty Schools.</p>
+    <p>Jane Doe saved us from a web disaster.</p><br>
+    
+    <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-text-black w3-margin-right">Rebecca Flex.</span> CEO at Company.</p>
+    <p>No one is better than Jane Doe.</p><br>
+    
+    <!-- Grid for pricing tables -->
+    <h3 class="w3-padding-16">My Prices</h3>
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Personal</li>
+          <li class="w3-padding-16">Web Design</li>
+          <li class="w3-padding-16">Photography</li>
+          <li class="w3-padding-16">Custom Editing</li>
+          <li class="w3-padding-16">Modern Look</li>
+          <li class="w3-padding-16">Logo Design</li>
+          <li class="w3-padding-16">Endless Support</li>
+          <li class="w3-padding-16">
+            <h2>Start at 500 $</h2>
+            <span class="w3-opacity">Full Website</span>
+          </li>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-half">
+        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+          <li class="w3-black w3-xlarge w3-padding-32">Business</li>
+          <li class="w3-padding-16">Web Design</li>
+          <li class="w3-padding-16">Photography</li>
+          <li class="w3-padding-16">Custom Editing</li>
+          <li class="w3-padding-16">Dashboard Manager</li>
+          <li class="w3-padding-16">Sales Integration</li>
+          <li class="w3-padding-16">Endless Support</li>
+          <li class="w3-padding-16">
+            <h2>Start at 1200 $</h2>
+            <span class="w3-opacity">Full Website</span>
+          </li>
+          </li>
+        </ul>
+      </div>
+</div>      
+
+ <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Services</li>
+          <li class="w3-padding-16">Musical Development</li>
+          <li class="w3-padding-16">Video Media</li>
+          <li class="w3-padding-16">Photoshop</li>
+          <li class="w3-padding-16">Graphic Design</li>
+          <li class="w3-padding-16">
+            <h2>$ 45</h2>
+            <span class="w3-opacity">per hour</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+          <a href="#contact">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Contact</button>
+          </a>
+          </li>
+        </ul>
+      </div>
+<div>      
+      <div class="w3-half">
+        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+          <li class="w3-black w3-xlarge w3-padding-32">Automation</li>
+          <li class="w3-padding-16">Tasks Automation</li>
+          <li class="w3-padding-16">Office Automation</li>
+          <li class="w3-padding-16">Social Media Automation</li>
+          <li class="w3-padding-16">Endless Support</li>
+          <li class="w3-padding-16">
+            <h2>Custom Pricing</h2>
+            <span class="w3-opacity">Free Quotes</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+          <a href="#contact">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Contact</button>
+          </a>
+          </li>
+        </ul>
+      </div>
+    <!-- End Grid/Pricing tables -->
+    </div>
+    
+  <!-- End About Section -->
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+    <h2>Contact Me</h2>
+    <hr class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Quebec City, CA</p>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +418 2540593</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: duguay_world@outlook.com</p>
+    </div>
+    
+    <!-- Image of location/map -->
+    <img src="media/map.png" class="w3-image w3-greyscale" style="width:100%;margin:32px 0">
+   
+    <p>Lets get in touch. Send me a message:</p>
+     <form action="process_form.php" method="post">
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
+        <p>
+            <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+                <i class="fa fa-paper-plane"></i> SEND MESSAGE
+            </button>
+        </p>
+    </form>
+  <!-- End Contact Section -->
+  </div>  
+</div>  
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Benjamin Duguay</p>
+  <!-- End footer -->
+  </footer>
+  
+<!-- END PAGE CONTENT -->
+</div>
+
+<script>
+// Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+document.getElementById('downloadButton').addEventListener('click', function() {
+  // Get the HTML content of the entire page
+  var htmlContent = document.documentElement.outerHTML;
+
+  // Use html2pdf to convert HTML to PDF
+  html2pdf(htmlContent)
+    .then(function(pdf) {
+      // Create a link element
+      var a = document.createElement('a');
+
+      // Set the download attribute with a desired filename
+      a.download = 'webpage.pdf';
+
+      // Create a Blob from the PDF data and set it as the href attribute of the link
+      a.href = URL.createObjectURL(pdf);
+
+      // Append the link to the document
+      document.body.appendChild(a);
+
+      // Click the link to trigger the download
+      a.click();
+
+      // Remove the link from the document
+      document.body.removeChild(a);
+    });
+});
+</script>
+
+</body>
+</html>
