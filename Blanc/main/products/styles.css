@@ -1,0 +1,62 @@
+.modal-content form {
+    margin-top: 10px;
+    display: grid;
+    gap: 10px;
+    text-align: left;
+}
+
+.modal-content label {
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-content input {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #75a1a3;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.modal-content button {
+    padding: 7px 15px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #75a1a3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-bottom: 5px;
+}
+
+.modal-content button:hover {
+    background-color: #333;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+}
+
+.horizontal-buttons .button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none; /* Remove default underline on anchor tags */
+}
+
+.horizontal-buttons .button:hover {
+    color: #75a1a3;
+    background-color: #333;
+
+}
