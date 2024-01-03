@@ -1,6 +1,6 @@
-# Welcome to [Your Name]'s GitHub Profile 👋
+# Welcome to Ben's GitHub Profile 👋
 
-Hello there! I'm [Your Name], a passionate developer who loves to explore and create interesting projects. This is my GitHub playground where I share most of my coding adventures. You can find a variety of projects, ranging from web development to machine learning, and everything in between.
+Hello there! I'm Benjamin Duguay, a passionate developer who loves to explore and create interesting projects. This is my GitHub playground where I share most of my coding adventures. You can find a variety of projects, ranging from web development to machine learning, and everything in between.
 
 Feel free to explore the repositories and provide feedback or suggestions. Contributions are always welcome!
 
