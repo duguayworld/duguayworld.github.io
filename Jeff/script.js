@@ -71,11 +71,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
   
-  // Function to remove the overlay
-  function removeOverlay() {
-    var blurOverlay = document.getElementById('blurOverlay');
-    if (blurOverlay) {
-      blurOverlay.style.display = 'none';
-    }
-  }
-});
