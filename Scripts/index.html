@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Fira Code' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='styles.css' rel='stylesheet'>
+  <title>Scripts</title>
+</head>
+<body>
+
+  <!-- Blur Overlay -->
+    <div class="blur-overlay" id="blurOverlay">
+        <div class="overlay-content">
+            <h1>The development of this website is currently in progress.</h1>
+            <p>We're working hard to bring you an amazing experience.</p>
+            <button onclick="removeOverlay()">Watch Progess</button>
+        </div>
+    </div>
+
+  <!-- Sidebar -->
+  <div id="sidebar">
+
+  <span><i class="fa fa-bars" style="color: #87d7d7; font-size:48px;"></i>&nbsp;Menu</span>
+  
+    <a href="#" data-page="page1">Bash Scripts &nbsp;&nbsp;<i class="fa fa-arrow-right" style="color: #dcdcdc;"></i> </a>
+      <ul>
+        <li><a href="#" data-page="terminalPage">&nbsp;&nbsp;Pacman Cleaner</a></li>
+        <li><a href="#" data-page="terminalPage2">&nbsp;&nbsp;Remove Duplicates</a></li>
+        <li><a href="#" data-page="terminalPage3">&nbsp;&nbsp;Theme Installer</a></li>
+        <!-- Add more pages as needed -->
+      </ul>
+
+    <a href="#" data-page="page2">Python Scripts &nbsp;&nbsp;<i class="fa fa-arrow-right" style="color: #dcdcdc;"></i> </a>
+      <ul>
+        <li><a href="#" data-page="terminalPage4">&nbsp;&nbsp;LinkedIn Bot</a></li>
+        <li><a href="#" data-page="terminalPage5">&nbsp;&nbsp;Facebook Bot</a></li>
+        <li><a href="#" data-page="terminalPage6">&nbsp;&nbsp;Automation</a></li>
+        <!-- Add more pages as needed -->
+      </ul>
+
+    <a href="#" data-page="page3">PowerShell &nbsp;&nbsp;<i class="fa fa-arrow-right" style="color: #dcdcdc;"></i> </a>
+      <ul>
+        <li><a href="#" data-page="page7">Page 7</a></li>
+        <li><a href="#" data-page="page8">Page 8</a></li>
+        <li><a href="#" data-page="page9">Page 9</a></li>
+        <!-- Add more pages as needed -->
+      </ul>
+
+    <a href="#" data-page="page4">Arduino &nbsp;&nbsp;<i class="fa fa-arrow-right" style="color: #dcdcdc;"></i> </a>
+      <ul>
+        <li><a href="#" data-page="page10">Page 10</a></li>
+        <li><a href="#" data-page="page11">Page 11</a></li>
+        <li><a href="#" data-page="page12">Page 12</a></li>
+        <!-- Add more pages as needed -->
+      </ul>
+
+    <!-- Add more categories as needed -->
+  </div>
+
+ <!-- Main Content -->
+  <div id="main-content">
+    
+    <!-- Page Content 1 -->
+ <div class="page-content" id="terminalPage">
+  <div id="header"><i class="fa fa-code" style="font-size:48px;"></i>&nbsp;pac-clean.sh</div>
+      <p>This simple script made for Arch based distro - Use it to clean pacman and maintain a clean filesystem.</p>
+    <pre class="terminal">
+      <code>
+        <span class="command">#!/bin/bash</span>
+        <span class="comment">
+          echo "$1" | eos-rankmirrors
+	  echo "$1" | yay -Syyu
+	  echo "$1" | sudo pacman -Sc
+	  journalctl --vacuum-time=4weeks
+	  paccache -ruk0
+	  echo "$1" | sudo pacman -Rns $(pacman -Qdtq)</span>
+	  
+        <span class="command">echo "Pacman Cleaned Successfully"</span>
+        <span class="command"></span>
+      </code>
+    </pre>
+  </div>
+</div>
+
+    <!-- Page Content 2 -->
+ <div class="page-content" id="terminalPage2">
+  <div id="header"><i class="fa fa-code" style="font-size:48px;"></i>&nbsp;rmdpc.sh</div>
+      <p>This is a small bash script used to remove duplicated lines from the imput file. Uses: sudo ./rmdpc.sh /path/to/inputfile </p>
+    <pre class="terminal">
+      <code>
+        <span class="command">#!/bin/bash</span>
+        <span class="comment">
+        <span class="command"># Check if the input file is provided</span>
+        if [ -z "$1" ]; then
+            echo "Usage: $0 <input_file>"
+            exit 1
+        fi
+
+            input_file="$1"
+
+        <span class="command"># Check if the input file exists</span>
+        if [ ! -e "$input_file" ]; then
+            echo "Error: File '$input_file' not found."
+            exit 1
+        fi
+
+        <span class="command"># Create a temporary file for the sorted and unique lines</span>
+        temp_file=$(mktemp)
+
+        <span class="command"># Sort the input file and remove duplicate lines</span>
+        sort -u "$input_file" > "$temp_file"
+
+        <span class="command"># Overwrite the original file with the sorted and unique lines</span>
+        mv "$temp_file" "$input_file"
+
+        <span class="command">echo "Duplicate lines removed from $input_file."</span>
+
+
+	<span><i class="fa fa-github" style="color: #dcdcdc; font-size:48px;"></i>&nbsp;&nbsp;View on Github</span>
+      </code>
+    </pre>
+  </div>
+</div>
+
+    <!-- Page Content 3 -->
+ <div class="page-content" id="terminalPage3">
+  <div id="header"><i class="fa fa-code" style="font-size:48px;"></i>&nbsp;install-theme.sh</div>
+      <p>This is a small bash script used to install a window manager and icon theme on a Arch Linux based distro. </p>
+    <pre class="terminal">
+      <code>
+        <span class="command">#!/bin/bash</span>
+        <span class="comment">
+        <span class="command"># Function to install an icon theme from a Git repository</span>
+	install_icon_theme() {
+            local repo_url=$1
+            local target_dir="$HOME/.icons"
+            local theme_name=$(basename $repo_url .git)
+    
+            echo "Cloning $repo_url..."
+            git clone $repo_url $target_dir/$theme_name
+    
+            echo "Setting up $theme_name as the default icon theme..."
+        <span class="command"># Replace the command to set the theme based on your desktop environment</span>
+        gsettings set org.gnome.desktop.interface icon-theme $theme_name
+        }
+
+        <span class="command"># Function to install a window manager theme from a Git repository</span>
+        install_window_manager_theme() {
+            local repo_url=$1
+            local target_dir="$HOME/.themes"
+            local theme_name=$(basename $repo_url .git)
+    
+            echo "Cloning $repo_url..."
+            git clone $repo_url $target_dir/$theme_name
+    
+            echo "Setting up $theme_name as the default window manager theme..."
+        <span class="command"># Replace the command to set the theme based on your window manager</span>
+        <span class="command"># For example, for Openbox, you might update the theme in the ~/.config/openbox/rc.xml file</span>
+        }
+
+        <span class="command"># Replace these with the actual URLs of the Git repositories for the icon and window manager themes</span>
+        icon_theme_repo="https://github.com/example/icon-theme.git"
+        wm_theme_repo="https://github.com/example/window-manager-theme.git"
+
+        <span class="command"># Install the icon theme</span>
+        install_icon_theme $icon_theme_repo
+
+        <span class="command"># Install the window manager theme</span>
+        install_window_manager_theme $wm_theme_repo
+
+        <span class="command">echo "Themes installation complete."</span>
+        <span class="command"></span>
+      </code>
+    </pre>
+  </div>
+</div>
+
+
+
+    <!-- Page Content 4 -->
+ <div class="page-content" id="terminalPage4">
+  <div id="header">linkedin.py</div>
+      <p>This is a python script that creates post on linkedin.com Uses: python linkedin.py</p>
+    <pre class="terminal">
+      <code>
+<span class="command">Python 3.11</span>
+<span class="comment">
+import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
+
+email = <span class="command">'youremail@email.com'</span>
+password = <span class="command">'YourSophisticatedPassword'</span>
+post_text = <span class="command">"This is a code made by PaulGrey"</span>
+
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument("--disable-notifications")
+
+<span class="command"># Set the path to your Chromium executable</span>
+chromium_path = "/usr/bin/chromium"
+chrome_options.binary_location = chromium_path
+
+driver = webdriver.Chrome(options=chrome_options)
+
+<span class="command"># Open LinkedIn login page</span>
+driver.get("https://www.linkedin.com/login")
+
+username_field = driver.find_element(By.ID, "username")
+password_field = driver.find_element(By.ID, "password")
+login_button = driver.find_element(By.XPATH, "//button[@type='submit']")
+
+username_field.send_keys(email)
+password_field.send_keys(password)
+
+login_button.click()
+
+
+<span class="command"># Explicitly wait for the Home page to load</span>
+try:
+    WebDriverWait(driver, 20).until(EC.url_contains("linkedin.com/feed"))
+    print("Successfully logged in. Home page loaded.")
+except TimeoutException:
+    print("Timed out waiting for the Home page to load.")
+
+<span class="command"># Wait for and close the message overlay (if present)</span>
+try:
+    overlay_element = WebDriverWait(driver, 20).until(
+        EC.element_to_be_clickable((By.XPATH, '//button[contains(@class, "truncate")]'))
+    )
+    overlay_element.click()
+    print("Message overlay closed successfully.")
+except TimeoutException:
+    print("Message overlay not found or could not be closed.")
+
+<span class="command"># Click on "Start a post"</span>
+try:
+    status_update_element = WebDriverWait(driver, 20).until(
+        EC.presence_of_element_located((By.XPATH, '//*[@id="ember24"]'))
+    )
+    status_update_element.click()
+    print("Clicked on 'Start a post' successfully.")
+except TimeoutException:
+    print("Start a post button not found.")
+
+<span class="command"># Enter post text</span>
+try:
+    popup_textbox = WebDriverWait(driver, 20).until(
+        EC.presence_of_element_located((By.XPATH, "//div[@role='dialog']//div[@role='textbox']"))
+    )
+<span class="command"># Start typing</span>
+    popup_textbox.send_keys("Voici mon portfolio ainsi que CV en ligne.")
+<span class="command"># Line Break</span>
+    popup_textbox.send_keys(Keys.ENTER)
+    popup_textbox.send_keys("Here is my portfolio and my online resume.")
+
+<span class="command"># Line Break</span>
+    popup_textbox.send_keys(Keys.ENTER)
+    popup_textbox.send_keys("https://duguayworld.github.io/")
+
+    actions = ActionChains(driver)
+<span class="command"># Add a short delay between key presses</span>
+    time.sleep(1)
+    actions.send_keys(Keys.TAB)
+    time.sleep(1)
+    actions.send_keys(Keys.TAB)
+    time.sleep(1)
+    actions.send_keys(Keys.TAB)
+    time.sleep(1)
+    actions.send_keys(Keys.TAB)
+    time.sleep(1)
+    actions.send_keys(Keys.TAB)
+    time.sleep(1)
+    actions.send_keys(Keys.TAB)
+    time.sleep(1)
+    actions.send_keys(Keys.ENTER)
+
+    actions.perform()
+
+<span class="command">print('Post published successfully!')</span>
+except TimeoutException:
+    print("Post text box not found.")
+finally:
+    driver.quit()
+<span class="command"></span>
+      </code>
+    </pre>
+  </div>
+</div>
+
+    <!-- Page Content 5 -->
+ <div class="page-content" id="terminalPage5">
+  <div id="header">facebook.py</div>
+      <p>This is a python script that creates a post on facebook.com Uses: python facebook.py</p>
+    <pre class="terminal">
+<code>
+<span class="command">Python 3.11</span>
+<span class="comment">
+import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+<span class="command">email = 'Your Email'</span>
+<span class="command">password = 'Your Password'</span>
+
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument("--disable-notifications")
+
+driver = webdriver.Chrome(options=chrome_options)
+
+driver.get("https://www.facebook.com")
+
+username_field = driver.find_element(By.ID, "email")
+password_field = driver.find_element(By.ID, "pass")
+login_button = driver.find_element(By.NAME, "login")
+
+username_field.send_keys(email)
+password_field.send_keys(password)
+
+login_button.click()
+
+<span class="command"># Wait for the login to complete</span>
+WebDriverWait(driver, 10).until(EC.url_contains("facebook.com"))
+
+driver.get("https://www.facebook.com/profile.php?id=61554272417391")
+
+<span class="command"># Define the target element</span>
+status_update_xpath = "//span[contains(text(), \"What's on your mind?\")]"
+
+<span class="command"># Scroll down until the target element is in view</span>
+while not driver.find_elements(By.XPATH, status_update_xpath):
+    driver.execute_script("window.scrollBy(0, 500);")
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, status_update_xpath)))
+
+<span class="command"># Click on the target element</span>
+status_update_element = driver.find_element(By.XPATH, status_update_xpath)
+status_update_element.click()
+
+<span class="command"># Wait for the pop-up window to appear</span>
+popup_textbox_xpath = "//div[@role='dialog']//div[@role='textbox']"
+WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, popup_textbox_xpath)))
+
+<span class="command"># Find the text box within the pop-up and enter text</span>
+popup_textbox = driver.find_element(By.XPATH, popup_textbox_xpath)
+popup_textbox.send_keys("https://duguayworld.github.io/")
+
+<span class="command"># Use ActionChains to press Shift + Tab multiple times and press Enter</span>
+actions = ActionChains(driver)
+
+<span class="command"># Add a short delay between key presses</span>
+time.sleep(1)
+actions.key_down(Keys.SHIFT)
+for _ in range(3):
+    actions.send_keys(Keys.TAB)
+time.sleep(1)
+actions.key_up(Keys.SHIFT)
+time.sleep(1)
+actions.send_keys(Keys.ENTER)
+
+actions.perform()
+
+<span class="command"># Print a message indicating that the post is published</span>
+print('Post published successfully!')
+
+      </code>
+    </pre>
+  </div>
+</div>
+
+
+
+    <!-- Page Content 6 -->
+ <div class="page-content" id="terminalPage6">
+  <div id="header">automation.py</div>
+      <p>This is a python script that automates other python scripts Uses: python automation.py</p>
+    <pre class="terminal">
+<code>
+<span class="command">Python 3.11</span>
+<span class="comment">
+import subprocess
+import time
+import os
+
+def run_script(script_name):
+    try:
+        <span class="command"># Run the script using subprocess</span>
+        subprocess.run(['python', script_name], check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"Error running {script_name}: {e}")
+
+if __name__ == "__main__":
+    <span class="command"># Specify the list of script names to run in sequence</span>
+    script_names = ['facebook.py', 'linkedin.py']
+
+    <span class="command"># Get the current working directory</span>
+    current_directory = os.path.dirname(os.path.abspath(__file__))
+
+    <span class="command"># Infinite loop to run the scripts every hour</span>
+    while True:
+        for script_name in script_names:
+            <span class="command"># Construct the full path to the script</span>
+            script_path = os.path.join(current_directory, script_name)
+
+            <span class="command"># Run the script</span>
+            run_script(script_path)
+
+        <span class="command"># Sleep for one hour before running the scripts again</span>
+        time.sleep(3600)
+
+      </code>
+    </pre>
+  </div>
+</div>
+
+
+    <!-- Page Content 7 -->
+    <div class="page-content" id="page7">
+        <div id="header">Your Page Title</div>
+      <p>Page 7 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
+    </div>
+
+
+    <!-- Page Content 8 -->
+    <div class="page-content" id="page8">
+        <div id="header">Your Page Title</div>
+      <p>Page 8 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
+    </div>
+
+
+    <!-- Page Content 9 -->
+    <div class="page-content" id="page9">
+        <div id="header">Your Page Title</div>
+      <p>Page 9 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
+    </div>
+
+
+    <!-- Page Content 10 -->
+    <div class="page-content" id="page10">
+        <div id="header">Your Page Title</div>
+      <p>Page 10 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
+    </div>
+
+
+    <!-- Page Content 11 -->
+    <div class="page-content" id="page11">
+        <div id="header">Your Page Title</div>
+      <p>Page 11 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
+    </div>
+
+
+    <!-- Page Content 12 -->
+    <div class="page-content" id="page12">
+        <div id="header">Your Page Title</div>
+      <p>Page 12 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
+    </div>
+    
+    <!-- Add more page contents as needed -->
+  </div>
+
+  <script>
+// Toggle submenus on click
+document.addEventListener('DOMContentLoaded', function () {
+  const categoryLinks = document.querySelectorAll('#sidebar > a');
+  categoryLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      const submenu = this.nextElementSibling;
+      if (submenu) {
+        submenu.style.display = (submenu.style.display === 'block') ? 'none' : 'block';
+      }
+
+      // Load corresponding page content if it's a category link
+      const isCategoryLink = !this.hasAttribute('data-page');
+      if (isCategoryLink) {
+        const pages = document.querySelectorAll('.page-content');
+        pages.forEach(page => {
+          page.classList.remove('active');
+        });
+      }
+    });
+  });
+
+  // Toggle active state for page links
+  const pageLinks = document.querySelectorAll('#sidebar ul li a');
+  pageLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      const pages = document.querySelectorAll('.page-content');
+      pages.forEach(page => {
+        page.classList.remove('active');
+      });
+
+      const pageId = this.getAttribute('data-page');
+      const selectedPage = document.getElementById(pageId);
+      if (selectedPage) {
+        selectedPage.classList.add('active');
+      }
+    });
+  });
+});
+
+// Automatically open the sidebar on page load
+window.onload = function () {
+  const sidebar = document.getElementById("sidebar");
+  const mainContent = document.getElementById("main-content");
+
+  sidebar.style.left = "0";
+  mainContent.style.marginLeft = "250px";
+};
+
+function removeOverlay() {
+    document.getElementById('blurOverlay').style.display = 'none';
+}
+
+  </script>
+
+</body>
+</html>
+

@@ -1,0 +1,291 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Code";
+  overflow-x: hidden;
+}
+.blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(12, 12, 12, 0.4);
+    backdrop-filter: blur(10px); /* Adjust the blur strength */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.overlay-content {
+    text-align: center;
+    color: rgba(12, 12, 12, 0.9);
+}
+
+button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgba(12, 12, 12, 0.9);
+    color: #87d7d7;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.5s;
+}
+
+button:hover {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #87d7d7;
+    color: rgba(12, 12, 12, 0.9);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.5s;
+    font-weight: 700;
+}
+
+
+#sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: rgba(12, 12, 12, 0.9);
+  overflow-y: auto;
+  transition: 0.5s;
+  backdrop-filter: blur(10px);
+}
+
+#sidebar a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.3s;
+}
+
+#sidebar a:hover {
+  margin: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+
+#sidebar li {
+  padding: 5px;
+  font-size: 16px;
+  color: #fff;
+}
+
+#sidebar a:hover + ul,
+#sidebar ul:hover {
+  display: block;
+}
+
+#sidebar span {
+  margin: 10px;
+  border: 1px solid #87d7d7;
+  padding: 10px;
+  font-size: 48px;
+  display: block;
+  text-decoration: none;
+  color: #87d7d7;
+  border-radius: 10px;
+  position: relative;
+}
+
+#main-content {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+
+#header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.page-content {
+  display: none;
+}
+
+.page-content.active {
+  display: block;
+  margin-top: 20px; /* Add some spacing between header and content */
+  color: #333; /* Adjust text color for better readability */
+}
+
+/*TERMINAL PAGES STYLES*/
+
+/*TERMINAL PAGE 1*/
+.page-content#terminalPage {
+  border-radius: 20px;
+  margin-top: -10px;
+  background-color: #202020;
+  color: #00ff00; /* Terminal text color, e.g., green */
+  padding: 20px;
+  overflow-x: auto;
+}
+
+#terminalPage .terminal {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+#terminalPage .command {
+  color: #66ff66; /* Command color, e.g., light green */
+}
+
+#terminalPage .comment {
+  color: #999; /* Comment color, e.g., gray */
+}
+
+/*TERMINAL PAGE 2*/
+.page-content#terminalPage2 {
+  margin-left: 260px;
+  margin-top: -20px;
+  margin-right: 10px;
+  border-radius: 20px;
+  background-color: #202020;
+  color: #00ff00; /* Terminal text color, e.g., green */
+  padding: 20px;
+  overflow-x: auto;
+}
+
+#terminalPage2 .terminal {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+#terminalPage2 .command {
+  color: #66ff66; /* Command color, e.g., light green */
+}
+
+#terminalPage2 .comment {
+  color: #999; /* Comment color, e.g., gray */
+}
+
+/*TERMINAL PAGE 3*/
+.page-content#terminalPage3 {
+  margin-left: 260px;
+  margin-top: -20px;
+  margin-right: 10px;
+  border-radius: 20px;
+  background-color: #202020;
+  color: #00ff00; /* Terminal text color, e.g., green */
+  padding: 20px;
+  overflow-x: auto;
+}
+
+#terminalPage3 .terminal {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+#terminalPage3 .command {
+  color: #66ff66; /* Command color, e.g., light green */
+}
+
+#terminalPage3 .comment {
+  color: #999; /* Comment color, e.g., gray */
+}
+
+/*TERMINAL PAGE 4*/
+.page-content#terminalPage4 {
+  margin-left: 260px;
+  margin-top: -20px;
+  margin-right: 10px;
+  border-radius: 20px;
+  background-color: #202020;
+  color: #87d7d7; /* Terminal text color, e.g., green */
+  padding: 20px;
+  overflow-x: auto;
+}
+
+#terminalPage4 .terminal {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+#terminalPage4 .command {
+  color: #87d7d7; /* Command color, e.g., light green */
+}
+
+#terminalPage4 .comment {
+  color: #d3d787; /* Comment color, e.g., gray */
+}
+
+/*TERMINAL PAGE 5*/
+.page-content#terminalPage5 {
+  margin-left: 260px;
+  margin-top: -20px;
+  margin-right: 10px;
+  border-radius: 20px;
+  background-color: #202020;
+  color: #87d7d7; /* Terminal text color, e.g., green */
+  padding: 20px;
+  overflow-x: auto;
+}
+
+#terminalPage5 .terminal {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+#terminalPage5 .command {
+  color: #87d7d7; /* Command color, e.g., light green */
+}
+
+#terminalPage5 .comment {
+  color: #d3d787; /* Comment color, e.g., gray */
+}
+
+/*TERMINAL PAGE 6*/
+.page-content#terminalPage6 {
+  margin-left: 260px;
+  margin-top: -20px;
+  margin-right: 10px;
+  border-radius: 20px;
+  background-color: #202020;
+  color: #87d7d7; /* Terminal text color, e.g., green */
+  padding: 20px;
+  overflow-x: auto;
+}
+
+#terminalPage6 .terminal {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+#terminalPage6 .command {
+  color: #87d7d7; /* Command color, e.g., light green */
+}
+
+#terminalPage6 .comment {
+  color: #d3d787; /* Comment color, e.g., gray */
+}
