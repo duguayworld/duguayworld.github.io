@@ -70,9 +70,12 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
-
+  
   // Function to remove the overlay
   function removeOverlay() {
-    document.getElementById('blurOverlay').style.display = 'none';
+    var blurOverlay = document.getElementById('blurOverlay');
+    if (blurOverlay) {
+      blurOverlay.style.display = 'none';
+    }
   }
 });
