@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Add an event listener for the scroll event
-  document.addEventListener('scroll', handleScroll);
+  // Add an event listener for the button click to remove the overlay
+  document.getElementById('yourButtonId').addEventListener('click', removeOverlay);
 
   // Function to animate header elements
   function animateHeader() {
@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
-});
 
-  //Remove Overlay
+  // Function to remove the overlay
   function removeOverlay() {
     document.getElementById('blurOverlay').style.display = 'none';
-}
+  }
+});
