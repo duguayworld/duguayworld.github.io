@@ -10,6 +10,6 @@ If you're interested in my professional background, you can check out my online 
 
 ## 📫 Let's Connect
 
-I'm always open to new opportunities, collaborations, or just having a chat about tech. Feel free to reach out to me through [LinkedIn](link-to-linkedin) or [Twitter](link-to-twitter). Let's build something amazing together!
+I'm always open to new opportunities, collaborations, or just having a chat about tech. Feel free to reach out to me through [LinkedIn](https://www.linkedin.com/in/duguayworld/) or [Facebook](https://www.facebook.com/profile.php?id=61554272417391). Let's build something amazing together!
 
 Thanks for stopping by! 🌟
