@@ -7,8 +7,8 @@ body .flip-box {
 
 .flip-box {
   background-color: transparent;
-  width: 600px;
-  height: 300px;
+  width: 100%;
+  height: auto;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
