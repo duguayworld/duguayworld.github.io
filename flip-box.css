@@ -52,12 +52,12 @@
 
 /* Style the front side */
 .flip-box-front {
-  background-color: #fff; /* Set the background color or add other styles as needed */
+  background-color: rgba (0, 0, 0, 0); /* Set the background color or add other styles as needed */
 }
 
 /* Style the back side */
 .flip-box-back {
-  background-color: #f1f1f1; /* Set the background color or add other styles as needed */
+  background-color: rgba (0, 0, 0, 0); /* Set the background color or add other styles as needed */
   transform: rotateY(180deg);
   display: flex; /* Add this to maintain the flex container for the image */
 }
