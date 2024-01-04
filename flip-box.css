@@ -2,7 +2,8 @@ body .flip-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 00;
+  margin-left: 0;
+  padding: 20px;
 }
 
 .flip-box {
