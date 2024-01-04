@@ -346,17 +346,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <img src="media/map.png" class="w3-image w3-greyscale" style="width:100%;margin:32px 0">
    
     <p>Lets get in touch. Send me a message:</p>
-       <form id="contactForm">
-        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
-        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
-        <p>
-            <button class="w3-button w3-light-grey w3-padding-large" type="button" onclick="submitForm()">
-                <i class="fa fa-paper-plane"></i> SEND MESSAGE
-            </button>
-        </p>
-    </form>
+      
   <!-- End Contact Section -->
   </div>  
 </div>  
@@ -379,41 +369,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </div>
 
  <script>
-       function submitForm() {
-    var form = document.getElementById('contactForm');
-    var formData = new FormData(form);
-
-    // Convert form data to plain text
-    var plainText = '';
-    formData.forEach(function(value, key) {
-        plainText += key + ': ' + value + '\n';
-    });
-
-    // Send data to server
-    fetch('save_form.php', {
-        method: 'POST',
-        body: plainText,
-        headers: {
-            'Content-Type': 'text/plain'
-        }
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.text();
-    })
-    .then(data => {
-        // Process the response data (if needed)
-        console.log(data);
-        // Redirect or update the DOM as necessary
-        // For example, you can redirect to a thank you page:
-        // window.location.href = 'thank_you.html';
-    })
-    .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
-    });
-}
 
         // Open and close sidebar
         function openNav() {
