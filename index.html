@@ -379,35 +379,41 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </div>
 
  <script>
-        function submitForm() {
-            var form = document.getElementById('contactForm');
-            var formData = new FormData(form);
+       function submitForm() {
+    var form = document.getElementById('contactForm');
+    var formData = new FormData(form);
 
-            // Convert form data to plain text
-            var plainText = '';
-            formData.forEach(function(value, key) {
-                plainText += key + ': ' + value + '\n';
-            });
+    // Convert form data to plain text
+    var plainText = '';
+    formData.forEach(function(value, key) {
+        plainText += key + ': ' + value + '\n';
+    });
 
-            // Request file system access
-            window.showDirectoryPicker()
-            .then(async (directory) => {
-                // Create or open a file in the chosen directory
-                const fileHandle = await directory.getFileHandle('form_data.txt', { create: true });
-
-                // Create a writable stream
-                const writable = await fileHandle.createWritable();
-
-                // Write the plain text data to the file
-                await writable.write(plainText);
-
-                // Close the stream
-                await writable.close();
-            })
-            .catch((error) => {
-                console.error('Error accessing file system:', error);
-            });
+    // Send data to server
+    fetch('save_form.php', {
+        method: 'POST',
+        body: plainText,
+        headers: {
+            'Content-Type': 'text/plain'
         }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.text();
+    })
+    .then(data => {
+        // Process the response data (if needed)
+        console.log(data);
+        // Redirect or update the DOM as necessary
+        // For example, you can redirect to a thank you page:
+        // window.location.href = 'thank_you.html';
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });
+}
 
         // Open and close sidebar
         function openNav() {
