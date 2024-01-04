@@ -2,14 +2,12 @@ body .flip-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 0;
-  padding: 20px;
 }
 
 .flip-box {
   background-color: transparent;
-  width: 50%;
-  height: auto;
+  width: 600px;
+  height: 300px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
