@@ -346,13 +346,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <img src="media/map.png" class="w3-image w3-greyscale" style="width:100%;margin:32px 0">
    
     <p>Lets get in touch. Send me a message:</p>
-     <form action="process_form.php" method="post">
+       <form id="contactForm">
         <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
         <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
         <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
         <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
         <p>
-            <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+            <button class="w3-button w3-light-grey w3-padding-large" type="button" onclick="submitForm()">
                 <i class="fa fa-paper-plane"></i> SEND MESSAGE
             </button>
         </p>
@@ -378,44 +378,74 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- END PAGE CONTENT -->
 </div>
 
-<script>
-// Open and close sidebar
-function openNav() {
-  document.getElementById("mySidebar").style.width = "60%";
-  document.getElementById("mySidebar").style.display = "block";
-}
+ <script>
+        function submitForm() {
+            var form = document.getElementById('contactForm');
+            var formData = new FormData(form);
 
-function closeNav() {
-  document.getElementById("mySidebar").style.display = "none";
-}
+            // Convert form data to plain text
+            var plainText = '';
+            formData.forEach(function(value, key) {
+                plainText += key + ': ' + value + '\n';
+            });
 
-document.getElementById('downloadButton').addEventListener('click', function() {
-  // Get the HTML content of the entire page
-  var htmlContent = document.documentElement.outerHTML;
+            // Request file system access
+            window.showDirectoryPicker()
+            .then(async (directory) => {
+                // Create or open a file in the chosen directory
+                const fileHandle = await directory.getFileHandle('form_data.txt', { create: true });
 
-  // Use html2pdf to convert HTML to PDF
-  html2pdf(htmlContent)
-    .then(function(pdf) {
-      // Create a link element
-      var a = document.createElement('a');
+                // Create a writable stream
+                const writable = await fileHandle.createWritable();
 
-      // Set the download attribute with a desired filename
-      a.download = 'webpage.pdf';
+                // Write the plain text data to the file
+                await writable.write(plainText);
 
-      // Create a Blob from the PDF data and set it as the href attribute of the link
-      a.href = URL.createObjectURL(pdf);
+                // Close the stream
+                await writable.close();
+            })
+            .catch((error) => {
+                console.error('Error accessing file system:', error);
+            });
+        }
 
-      // Append the link to the document
-      document.body.appendChild(a);
+        // Open and close sidebar
+        function openNav() {
+          document.getElementById("mySidebar").style.width = "60%";
+          document.getElementById("mySidebar").style.display = "block";
+        }
 
-      // Click the link to trigger the download
-      a.click();
+        function closeNav() {
+          document.getElementById("mySidebar").style.display = "none";
+        }
 
-      // Remove the link from the document
-      document.body.removeChild(a);
-    });
-});
-</script>
+        document.getElementById('downloadButton').addEventListener('click', function() {
+          // Get the HTML content of the entire page
+          var htmlContent = document.documentElement.outerHTML;
+
+          // Use html2pdf to convert HTML to PDF
+          html2pdf(htmlContent)
+            .then(function(pdf) {
+              // Create a link element
+              var a = document.createElement('a');
+
+              // Set the download attribute with a desired filename
+              a.download = 'webpage.pdf';
+
+              // Create a Blob from the PDF data and set it as the href attribute of the link
+              a.href = URL.createObjectURL(pdf);
+
+              // Append the link to the document
+              document.body.appendChild(a);
+
+              // Click the link to trigger the download
+              a.click();
+
+              // Remove the link from the document
+              document.body.removeChild(a);
+            });
+        });
+    </script>
 
 </body>
 </html>
