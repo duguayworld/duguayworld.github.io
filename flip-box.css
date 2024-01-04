@@ -1,6 +1,8 @@
 body .flip-box {
   display: flex;
-  margin-left: 10%;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0;
 }
 
 .flip-box {
