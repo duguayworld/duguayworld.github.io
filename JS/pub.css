@@ -1,0 +1,175 @@
+.body .blog-card {
+    font-family: 'Amethysta';
+    margin: 0;
+    padding: 0;
+    background-color: rgba(6, 66, 75, 0.7);
+}
+
+.blog-card {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+    width: 90%;
+    margin: 50px auto; /* Center horizontally */
+    padding: 20px;
+    background-color: rgba(6, 66, 75, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Add white border */
+}
+/* IMAGE MODAL */
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.close-button {
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+/* CARDS CONTENT */
+
+.blog-card img {
+    min-width: 250px;
+    width: 50%;
+    border-radius: 20px;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-left: 20px;
+}
+
+.blog-card h1 {
+}
+
+.blog-card p {
+    font-size: 1.5rem;
+    opacity: 1;
+    transform: translateY(0);
+    display: block; /* Ensure the <p> is a block-level element */
+    margin-top: 10px; /* Adjust the margin as needed */
+    transition: opacity 0.6s, transform 0.6s;
+    margin-right: 20px;
+}
+
+.blog-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-buttonR {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(12, 12, 12, 0.5);
+    color: #87d7d7;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 100%;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.scroll-buttonR:hover {
+  border-radius: 100%;
+  background-color: #87d7d7;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.content-container {
+    position: relative;
+}
+
+.scroll-buttonL {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(12, 12, 12, 0.5);
+    color: #87d7d7;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 100%;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    z-index: 1;
+}
+
+.scroll-buttonL:hover {
+  border-radius: 100%;
+  background-color: #87d7d7;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  z-index:1
+}
+
+/* Styles for larger screens (non-mobile) */
+@media (min-width: 768px) {
+    .blog-card {
+        flex-direction: row;
+    }
+
+    .text-content {
+        max-width: 60%; /* Adjust the width based on your design */
+    }
+
+    .scroll-buttonL {
+        left: 10px;
+    }
+}
+
+/* Styles for smaller screens (mobile) */
+@media (max-width: 767px) {
+    .blog-card {
+        flex-direction: column-reverse; /* Stacking image above text */
+    }
+
+    .text-content {
+        max-width: 100%; /* Full width for text on mobile */
+    }
+
+    .scroll-buttonL {
+        left: 50%; /* Center the button horizontally on mobile */
+        transform: translateX(-50%);
+    }
+    
+    img {
+        width: 100%; /* Make the image fill the width of the card on mobile */
+        margin: 0;
+        padding: 0;
+    }
+}
+

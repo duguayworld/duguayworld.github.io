@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Amethysta' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/96ddd6f749.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="apropos.css">
+    <link rel="stylesheet" href="flip-box.css">
+    <link rel="stylesheet" href="pub.css">
+    <title>Electricite DJ. Inc.</title>
+</head>
+<body>
+  <!--MENU BAR-->
+<div class="menu-bar">
+    <!-- Add your menu items here -->
+    <a href="index.html">Acceuil</a>
+    <a href="projets.html">Projets</a>
+    <a href="apropos.html">À propos</a>
+    <a href="contact.html">Contact</a>
+    <!-- Add more menu items as needed -->
+</div>
+
+  <!--BACKGROUND-->
+<div class="bg">
+    <img src="lightning.png" alt="Description of the image">
+</div>
+
+  <!--HEADER-->
+<div class="header-container">
+  <header>
+   <div class="flip-box">
+  	<div class="flip-box-inner">
+    	  <div class="flip-box-front">
+            <img src="front.png" alt="Description of the image">
+    		</div>
+    		<div class="flip-box-back">
+          <img src="back.png" alt="Description of the image">
+    </div>
+  </div>
+</div> 
+    <h1 id="pageTitle">Le leader en électricité.</h1>
+    <button class="header-button"><i class="fa-solid fa-down-long fa-2x"></i></button>
+  </header>
+  </div>
+</div>
+
+    <!-- BLOG CARDS SECTIONS -->
+    <div class="blog-card" id="blogCard1">
+        <img src="card.png" alt="Blog Image">
+        <div class="text-content">
+            <h1 class="slide-up"><i class="fa fa-plug"></i>&nbsp;&nbsp;Nos services</h1>
+            <p class="slide-up">
+            <i class="fa-solid fa-bolt"></i>&nbsp;&nbsp;Construction neuve et rénovations<br><br>
+            <i class="fa-solid fa-bolt"></i>&nbsp;&nbsp;Borne de recharge de véhicule<br><br>
+            <i class="fa-solid fa-bolt"></i>&nbsp;&nbsp;Piscine et Spa<br><br>
+            <i class="fa-solid fa-bolt"></i>&nbsp;&nbsp;Thermopompe<br><br>
+            <i class="fa-solid fa-bolt"></i>&nbsp;&nbsp;Chauffage<br><br>
+            <i class="fa-solid fa-bolt"></i>&nbsp;&nbsp;Entrée électrique et changement de paneau<br><br>
+            <i class="fa-solid fa-bolt"></i>&nbsp;&nbsp;Eclairage et bien plus!<br>
+            </p>
+        </div>
+    </div>
+
+  <!--JAVASCRIPT-->
+
+ <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const blogCards = document.querySelectorAll('.blog-card');
+            const headerButton = document.querySelector('.header-button');
+
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            function handleScroll() {
+                blogCards.forEach(card => {
+                    if (isInViewport(card)) {
+                        card.classList.add('fade-in');
+                        const slideUpElements = card.querySelectorAll('.slide-up');
+                        slideUpElements.forEach(element => {
+                            element.classList.add('slide-up');
+                        });
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', handleScroll);
+            handleScroll();
+
+            // Scroll to the blog card section when the header button is clicked
+            headerButton.addEventListener('click', function () {
+                const blogCard = document.getElementById('blogCard1');
+                blogCard.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</html>
+
