@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pheasant Breeds</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include your existing CSS theme -->
+    <style>
+        body {
+            margin: 0;
+            background-color: rgb(22, 20, 24);
+            color: #eee;
+        }
+
+        /* Breed Buttons Styling */
+        .breed-buttons {
+            margin-top: 3%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .breed-button {
+            margin: 0 10px;
+            padding: 10px 15px;
+            background-color: #ee83e5;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .breed-button:hover {
+            background-color: #d464b8;
+        }
+
+        /* Breed Sections Styling */
+        .breed-section {
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(40, 44, 52, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+  <!-- Menu Bar -->
+  <div class="menu-bar">
+    <a href="index.html">Home</a>
+    <a href="birds.html">Birds</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+
+  <!-- Background Image -->
+  <div class="bg">
+    <img src="media/background.png" alt="Background">
+  </div>
+
+  <!-- Breed Buttons -->
+  <div class="breed-buttons">
+	<button class="breed-button" onclick="scrollToBreedSection('breed1')">Breed 1</button>
+	<button class="breed-button" onclick="scrollToBreedSection('breed2')">Breed 2</button>
+	<button class="breed-button" onclick="scrollToBreedSection('breed3')">Breed 3</button>
+	<button class="breed-button" onclick="scrollToBreedSection('breed4')">Breed 4</button>
+	<button class="breed-button" onclick="scrollToBreedSection('breed5')">Breed 5</button>
+	<button class="breed-button" onclick="scrollToBreedSection('breed6')">Breed 6</button>
+  </div>
+
+  <!-- Breed Sections -->
+  <div id="breed1" class="breed-section">
+    <h2>Breed 1</h2>
+    <p>Description of Breed 1.</p>
+  </div>
+
+  <div id="breed2" class="breed-section">
+    <h2>Breed 2</h2>
+    <p>Description of Breed 2.</p>
+  </div>
+
+  <div id="breed3" class="breed-section">
+    <h2>Breed 3</h2>
+    <p>Description of Breed 3.</p>
+  </div>
+  
+  <div id="breed4" class="breed-section">
+    <h2>Breed 4</h2>
+    <p>Description of Breed 4.</p>
+  </div>
+
+  <div id="breed5" class="breed-section">
+    <h2>Breed 5</h2>
+    <p>Description of Breed 5.</p>
+  </div>
+
+  <div id="breed6" class="breed-section">
+    <h2>Breed 6</h2>
+    <p>Description of Breed 6.</p>
+  </div>
+
+<script>
+    // JavaScript function to scroll to the specified breed section
+    function scrollToBreedSection(breedId) {
+        var breedSection = document.getElementById(breedId);
+        breedSection.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+
+</body>
+</html>
+
