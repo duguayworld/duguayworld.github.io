@@ -12,6 +12,54 @@ body {
   overflow: auto; /* Allow content overflow */
 }
 
+
+/*BLUR OVERLAY*/
+.blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(12, 12, 12, 0.4);
+    backdrop-filter: blur(10px); /* Adjust the blur strength */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.overlay-content {
+    text-align: center;
+    color: #ee83e5;
+}
+
+button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ee83e5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.5s;
+}
+
+button:hover {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #87d7d7;
+    color: rgba(12, 12, 12, 0.9);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.5s;
+    font-weight: 700;
+}
+
 /* BACKGROUND DESIGN */
 
 .bg {
