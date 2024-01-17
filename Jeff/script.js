@@ -77,3 +77,8 @@ document.addEventListener('DOMContentLoaded', function () {
             var nextSection = document.getElementById('section1'); // Change this to the ID of your next container
             nextSection.scrollIntoView({ behavior: 'smooth' });
         }
+
+  //Remove blur Overlay
+  function removeOverlay() {
+      document.getElementById('blurOverlay').style.display = 'none';
+}
