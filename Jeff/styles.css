@@ -34,7 +34,7 @@ body {
     color: #ee83e5;
 }
 
-button {
+overlay-button {
     margin-top: 30px;
     padding: 10px 20px;
     font-size: 16px;
@@ -47,7 +47,7 @@ button {
     transition: 0.5s;
 }
 
-button:hover {
+overlay-button:hover {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
