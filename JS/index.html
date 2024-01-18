@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Amethysta' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/96ddd6f749.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="flip-box.css">
+    <title>Electricite DJ. Inc.</title>
+</head>
+<body>
+
+  <!--Blur Overlay-->
+    <div class="blur-overlay" id="blurOverlay">
+        <div class="overlay-content">
+            <h1>Le développement de votre site web est actuellement en cours.</h1>
+            <p>Nous travaillons dur pour vous offrir une expérience incroyable.</p>
+            <button onclick="removeOverlay()">Voir le progrès ...</button>
+        </div>
+    </div>
+    
+  <!--MENU BAR-->
+<div class="menu-bar">
+    <!-- Add your menu items here -->
+    <a href="index.html">Acceuil</a>
+    <a href="projets.html">Projets</a>
+    <a href="apropos.html">À propos</a>
+    <a href="contact.html">Contact</a>
+    <!-- Add more menu items as needed -->
+</div>
+
+  <!--BACKGROUND-->
+<div class="bg">
+    <img src="lightning.png" alt="Description of the image">
+</div>
+
+  <!--HEADER-->
+<div class="header-container">
+  <header>
+   <div class="flip-box">
+  	<div class="flip-box-inner">
+    	  <div class="flip-box-front">
+            <img src="front.png" alt="Description of the image">
+    		</div>
+    		<div class="flip-box-back">
+          <img src="back.png" alt="Description of the image">
+    </div>
+  </div>
+</div> 
+    <h1 id="pageTitle">Bienvenue chez Électricité DJ Inc.</h1>
+    <p id="pageSubtitle">Leader en électricité.</p>
+    <button class="header-button"><i class="fa-solid fa-down-long fa-2x"></i></button>
+  </header>
+  </div>
+</div>
+</body>
+
+  <!--JAVASCRIPT-->
+
+<script>
+function removeOverlay() {
+    document.getElementById('blurOverlay').style.display = 'none';
+}
+</script>
+</html>
+

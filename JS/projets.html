@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Amethysta' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/96ddd6f749.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog-card.css">
+    <title>Electricite DJ. Inc.</title>
+</head>
+<body>   
+    <!-- MENU BAR -->
+    <div class="menu-bar">
+        <a href="index.html">Acceuil</a>
+        <a href="projets.html">Projets</a>
+        <a href="apropos.html">À propos</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- BACKGROUND -->
+    <div class="bg">
+        <img src="lightning.png" alt="Description of the image">
+    </div>
+    <!-- HEADER -->
+    <header>
+        <h1 id="pageTitle">Nos projets</h1>
+        <p id="pageSubtitle">Les plus recents</p>
+        <button class="header-button" onclick="scrollToNextCard()"><i class="fa fa-plug fa-2x"></i></button>
+    </header>
+    
+    <!-- IMAGE MODAL -->
+<div class="modal-container" id="modalContainer">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <img src="" alt="Full-screen Image" id="fullScreenImage">
+    </div>
+</div>
+
+    <!-- BLOG CARDS SECTIONS -->
+    <div class="blog-card" id="blogCard1">
+        <img src="photo1.png" alt="Blog Image">
+        <div class="text-content">
+            <h1 class="slide-up"><i class="fa fa-plug"></i> Nom du projet 1</h1>
+            <p class="slide-up">
+                Découvrez notre dernier projet électrique, une réalisation exceptionnelle où l'art de l'éclairage prend vie. Notre équipe chez Electricité DJ Inc. a créé un environnement véritablement unique en intégrant des luminaires encastrés d'une élégance sans pareil.<br><br>Dans ce projet, chaque détail a été méticuleusement conçu pour offrir un éclairage hors pair, apportant une atmosphère captivante à chaque espace. Les luminaires encastrés, soigneusement positionnés, jouent un rôle clé en ajoutant une touche moderne et sophistiquée à l'ensemble.<br><br>L'utilisation judicieuse de différentes intensités lumineuses crée des jeux d'ombres et de lumières, mettant en valeur les caractéristiques architecturales et ajoutant une profondeur visuelle à chaque coin de la pièce. Que ce soit pour souligner des zones spécifiques, créer des ambiances chaleureuses ou accentuer des éléments décoratifs, notre éclairage sur mesure transforme l'espace en une œuvre d'art lumineuse.<br><br>En plus de l'esthétique exceptionnelle, nous avons également mis l'accent sur l'efficacité énergétique, en utilisant des technologies de pointe pour minimiser la consommation tout en maximisant l'impact visuel. Ce projet illustre notre engagement envers l'excellence, où l'électricité devient une véritable source d'inspiration. Laissez Electricité DJ Inc. illuminer votre projet avec notre savoir-faire inégalé.
+            </p>
+           <button class="scroll-buttonR" onclick="scrollToNextCard()"><i class="fa-solid fa-down-long fa-2x"></i></button>
+        </div>
+    </div>
+
+   <div class="blog-card" id="blogCard2">  
+    <div class="text-content">
+        <h1 class="slide-up"><i class="fa fa-plug"></i> Nom du projet 2</h1>
+        <p class="slide-up">
+            Découvrez notre projet récent dans le domaine de l'électricité, mettant en lumière notre expertise exceptionnelle dans la conception et l'installation électrique pour les garages commerciaux. Chez Electricité DJ Inc., nous avons créé un environnement électrique optimal, offrant une solution complète et innovante pour répondre aux besoins spécifiques de notre client.<br><br>
+Dans ce projet de garage commercial, nous avons mis l'accent sur l'éclairage fonctionnel et efficace, en intégrant des systèmes lumineux qui optimisent la visibilité tout en assurant une consommation énergétique minimale. Les luminaires ont été soigneusement positionnés pour éliminer les zones d'ombre, créant ainsi un espace de travail sûr et bien éclairé.<br><br>
+Notre équipe a également pris en compte les exigences de sécurité électrique, en installant des dispositifs de protection et en respectant les normes les plus strictes de l'industrie. Nous sommes fiers de notre approche axée sur l'efficacité énergétique, contribuant ainsi à réduire les coûts opérationnels à long terme pour notre client.<br><br>
+L'esthétique et la fonctionnalité ont été soigneusement équilibrées, avec des interrupteurs modernes et des panneaux électriques conçus pour faciliter l'accès et la gestion des équipements électriques. Chaque détail a été pris en compte pour garantir un environnement de travail optimal, reflétant notre engagement envers l'excellence et l'innovation dans le domaine de l'électricité commerciale.<br><br>
+Ce projet témoigne de notre capacité à fournir des solutions électriques sur mesure, adaptées aux besoins spécifiques de chaque client. Chez Electricité DJ Inc., nous sommes prêts à transformer votre vision en réalité, en vous offrant des solutions électriques fiables et de haute qualité pour les projets commerciaux. Faites confiance à notre savoir-faire inégalé pour illuminer votre espace commercial avec excellence.
+        </p>
+       <button class="scroll-buttonL" onclick="scrollToNextCard()"><i class="fa-solid fa-down-long fa-2x"></i></button>
+    </div>
+    <img src="photo2.png" alt="Blog Image 2">
+</div>
+
+ <div class="blog-card" id="blogCard3">
+        <img src="photo3.png" alt="Blog Image">
+        <div class="text-content">
+            <h1 class="slide-up"><i class="fa fa-plug"></i> Nom du projet 3</h1>
+            <p class="slide-up">
+                Explorez notre récent projet électrique dédié à la création d'un environnement optimal pour une étable abritant des animaux exotiques. Chez Electricité DJ Inc., nous avons conçu et mis en œuvre un système électrique sur mesure pour répondre aux besoins spécifiques de notre client, offrant une solution adaptée à la fois au bien-être des animaux et aux exigences opérationnelles.<br><br>
+Dans cette étable unique, notre équipe a mis l'accent sur la personnalisation et la customisation des installations électriques. Chaque aspect du système a été minutieusement planifié pour garantir un environnement sûr, confortable et adapté aux besoins spécifiques des animaux exotiques hébergés.<br><br>
+L'éclairage a été soigneusement étudié pour reproduire les conditions naturelles de lumière du jour, favorisant ainsi le bien-être des animaux. Des systèmes de contrôle sophistiqués permettent de moduler l'intensité lumineuse et la température, créant ainsi un environnement adapté aux différentes espèces présentes dans l'étable.<br><br>
+Notre approche s'étend également à la sécurité électrique, avec des dispositifs spécifiques pour prévenir tout risque potentiel. Des systèmes d'alarme et de surveillance sont intégrés pour assurer une réaction rapide en cas de problème, garantissant la sécurité à la fois des animaux et des installations.<br><br>
+Chaque prise de courant, interrupteur et élément du réseau électrique a été conçu en pensant à la flexibilité et à la facilité d'entretien. Notre équipe a travaillé en étroite collaboration avec le client pour comprendre les besoins spécifiques de chaque espèce hébergée, et chaque détail a été ajusté en conséquence.<br><br>
+Ce projet reflète notre engagement envers l'innovation et la personnalisation dans le domaine de l'électricité. Nous sommes fiers de pouvoir offrir des solutions électriques adaptées aux environnements uniques, mettant en avant notre capacité à personnaliser chaque aspect de nos projets pour répondre aux besoins spécifiques de nos clients. Faites confiance à Electricité DJ Inc. pour transformer vos idées en réalité, en apportant une expertise inégalée à chaque projet.
+            </p>
+           <button class="scroll-buttonR" onclick="scrollToNextCard()"><i class="fa-solid fa-down-long fa-2x"></i></button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const blogCards = document.querySelectorAll('.blog-card');
+
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function handleScroll() {
+            blogCards.forEach(card => {
+                if (isInViewport(card)) {
+                    card.classList.add('fade-in');
+                    const slideUpElements = card.querySelectorAll('.slide-up');
+                    slideUpElements.forEach(element => {
+                        element.classList.add('slide-up');
+                    });
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+
+        // Add this event listener for image clicks
+        document.querySelectorAll('.blog-card img').forEach(function (img, index) {
+            img.addEventListener('click', function () {
+                openModal(`photo${index + 1}.png`);
+            });
+        });
+
+        // Add this event listener for the full-screen image
+        const fullScreenImage = document.getElementById('fullScreenImage');
+        fullScreenImage.addEventListener('click', closeModal);
+    });
+
+    function scrollToNextCard() {
+        const currentCard = document.querySelector('.blog-card.fade-in');
+        const currentIndex = Array.from(document.querySelectorAll('.blog-card')).indexOf(currentCard);
+        const nextCard = document.querySelectorAll('.blog-card')[currentIndex + 1];
+
+        if (nextCard) {
+            nextCard.scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest'
+            });
+        }
+    }
+
+    function openModal(imageSrc) {
+        const modalContainer = document.getElementById('modalContainer');
+        const fullScreenImage = document.getElementById('fullScreenImage');
+
+        // Set the image source for the full-screen display
+        fullScreenImage.src = imageSrc;
+
+        // Show the modal
+        modalContainer.style.display = 'flex'; // Use 'flex' to center the content
+        document.body.style.overflow = 'hidden'; // Disable scrolling when the modal is open
+    }
+
+    function closeModal() {
+        const modalContainer = document.getElementById('modalContainer');
+
+        // Hide the modal
+        modalContainer.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Enable scrolling when the modal is closed
+    }
+</script>
+
+
+
+</body>
+</html>
+
