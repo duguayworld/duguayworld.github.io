@@ -1,0 +1,136 @@
+.body .blog-card {
+    font-family: 'Amethysta';
+    margin: 0;
+    padding: 0;
+}
+.card-container {
+    display: flex;
+    position: fixed;
+    margin: 10% auto 50px; /* Center horizontally and add margin on top */
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.blog-card {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 90%;
+    margin: 10% auto 50px; /* Center horizontally and add margin on top */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Add white border */
+}
+
+/* IMAGE MODAL */
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.close-button {
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+/* CARDS CONTENT */
+
+.blog-card img {
+    min-width: 250px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.blog-card.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.blog-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.slide-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-buttonR {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(12, 12, 12, 0.5);
+    color: #87d7d7;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 100%;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.scroll-buttonR:hover {
+    border-radius: 100%;
+    background-color: #87d7d7;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.content-container {
+    position: relative;
+}
+
+.scroll-buttonL {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(12, 12, 12, 0.5);
+    color: #87d7d7;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 100%;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    z-index: 1;
+}
+
+.scroll-buttonL:hover {
+    border-radius: 100%;
+    background-color: #87d7d7;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    z-index: 1;
+}
+
+/* Styles for larger screens (non-mobile) */
+@media (min-width: 768px) {
+    .blog-card {
+        flex-direction: row;
+    }
+
+    .text-content {
+        max-width: 60%; /* Adjust the width based on your design */
+    }
+
+    .scroll-buttonL {
+        left: 10px;
+    }
+}
+
