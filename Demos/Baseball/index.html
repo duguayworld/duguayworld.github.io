@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Casquette de Baseball - DB Web Media</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <!-- CSS -->
+    <link href="style.css" rel="stylesheet">
+    <meta name="robots" content="noindex,follow" />
+
+  </head>
+
+  <body>
+  
+  	  <!--Blur Overlay-->
+    <div class="blur-overlay" id="blurOverlay">
+        <div class="overlay-content">
+            <h1>Essayez nos pages web en direct. Cette page web est une démo.</h1>
+            <p>Il n'a jamais été aussi facile de lancer un produit en ligne.</p>
+	<button class="overlay-button" onclick="removeOverlay()">Accédez au démo.</button>       
+	</div>
+    </div>
+    
+  <!-- HEADER -->
+   <header>
+    <img src="images/logo.png" alt="Logo">
+  </header>
+
+    <main class="container">
+
+      <!-- Left Column / Product Image -->
+      <div class="left-column">
+        <img data-image="black" src="images/black.png" alt="">
+        <img data-image="blue" src="images/blue.png" alt="">
+        <img data-image="red" class="active" src="images/red.png" alt="">
+      </div>
+
+
+      <!-- Right Column -->
+      <div class="right-column">
+
+        <!-- Product Description -->
+        <div class="product-description">
+          <span>Custom Design</span>
+          <h1>Casquette de Baseball</h1>
+          <p>Découvrez notre casquette de baseball ajustable 100% coton à personnaliser avec votre logo. Confortable et stylée, elle est l'accessoire parfait pour afficher votre identité.</p>
+        </div>
+
+        <!-- Product Configuration -->
+        <div class="product-configuration">
+
+          <!-- Product Color -->
+          <div class="product-color">
+            <span>Color</span>
+
+            <div class="color-choose">
+              <div>
+                <input data-image="red" type="radio" id="red" name="color" value="red" checked>
+                <label for="red"><span></span></label>
+              </div>
+              <div>
+                <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+                <label for="blue"><span></span></label>
+              </div>
+              <div>
+                <input data-image="black" type="radio" id="black" name="color" value="black">
+                <label for="black"><span></span></label>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Cable Configuration -->
+          <div class="cable-config">
+            <span>Size</span>
+
+            <div class="cable-choose">
+              <button>Ajustable</button>
+            </div>
+
+		<div class="tooltip">
+    		    <a href="#">Faites parvenir votre logo à l'adresse dbwebmedia@outlook.com.</a>
+    		    <a href="#">Achetez un logo personnalisé.</a>
+  	    </div>
+          </div>
+        </div>
+
+        <!-- Product Pricing -->
+        <div class="product-price">
+          <span>34.99$</span>
+         <!-- Shopify Button -->
+<div id='product-component-1706029435893'></div>
+<script type="text/javascript">
+/*<![CDATA[*/
+(function () {
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  if (window.ShopifyBuy) {
+    if (window.ShopifyBuy.UI) {
+      ShopifyBuyInit();
+    } else {
+      loadScript();
+    }
+  } else {
+    loadScript();
+  }
+  function loadScript() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = scriptURL;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    script.onload = ShopifyBuyInit;
+  }
+  function ShopifyBuyInit() {
+    var client = ShopifyBuy.buildClient({
+      domain: 'ce2fbc.myshopify.com',
+      storefrontAccessToken: '439c1718c2eb10cbb7f6fe06328f10b3',
+    });
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      ui.createComponent('product', {
+        id: '9115372945727',
+        node: document.getElementById('product-component-1706029435893'),
+        moneyFormat: '%24%7B%7Bamount%7D%7D',
+        options: {
+  "product": {
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "calc(25% - 20px)",
+          "margin-left": "20px",
+          "margin-bottom": "50px"
+        }
+      },
+      "button": {
+        "font-size": "17px",
+        "padding-top": "16.5px",
+        "padding-bottom": "16.5px",
+        "border-radius": "8px"
+      },
+      "quantityInput": {
+        "font-size": "17px",
+        "padding-top": "16.5px",
+        "padding-bottom": "16.5px"
+      }
+    },
+    "buttonDestination": "checkout",
+    "contents": {
+      "img": false,
+      "title": false,
+      "price": false
+    },
+    "text": {
+      "button": "Buy now"
+    }
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-20px"
+        }
+      }
+    }
+  },
+  "modalProduct": {
+    "contents": {
+      "img": false,
+      "imgWithCarousel": true,
+      "button": false,
+      "buttonWithQuantity": true
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      },
+      "button": {
+        "font-size": "17px",
+        "padding-top": "16.5px",
+        "padding-bottom": "16.5px",
+        "border-radius": "8px"
+      },
+      "quantityInput": {
+        "font-size": "17px",
+        "padding-top": "16.5px",
+        "padding-bottom": "16.5px"
+      }
+    },
+    "text": {
+      "button": "Add to cart"
+    }
+  },
+  "option": {},
+  "cart": {
+    "styles": {
+      "button": {
+        "font-size": "17px",
+        "padding-top": "16.5px",
+        "padding-bottom": "16.5px",
+        "border-radius": "8px"
+      }
+    },
+    "text": {
+      "total": "Subtotal",
+      "button": "Checkout"
+    },
+    "popup": false
+  },
+  "toggle": {
+    "styles": {
+      "count": {
+        "font-size": "17px"
+      }
+    }
+  }
+},
+      });
+    });
+  }
+})();
+/*]]>*/
+</script>
+	</div>
+    </div>
+</div>
+    </main>
+    
+     <!-- Bottom Menu Bar -->
+  <div class="bottom-menu">
+    <a href="#">Politiques</a>
+    <!-- Add more menu items as needed -->
+  </div>
+        </div>
+      </div>
+    
+
+    <!-- Scripts -->
+    
+<script>
+       //Remove blur Overlay
+      function removeOverlay() {
+          document.getElementById('blurOverlay').style.display = 'none';
+}
+</script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="script.js" charset="utf-8"></script>
+  </body>
+</html>

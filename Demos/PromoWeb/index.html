@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Promo Web</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <!-- CSS -->
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>	
+
+	  <!--Blur Overlay-->
+    <div class="blur-overlay" id="blurOverlay">
+        <div class="overlay-content">
+            <h1>Essayez nos pages web en direct. Cette page web est une démo.</h1>
+            <p>Il n'a jamais été aussi facile de lancer un produit en ligne.</p>
+	<button class="overlay-button" onclick="removeOverlay()">Accédez au démo.</button>       
+	</div>
+    </div>
+    
+	  <!--Header-->	
+  <header class="header">
+    <img src="logo.png" alt="Logo">
+  </header>
+<!-- Empty container for spacing -->
+  <div class="empty-container"></div> 
+  <!-- Product Section -->
+  <div class="section-fluid-main">
+    <div class="section">
+      <div class="info-wrap mob-margin">
+        <p class="title-up">Custom Hoodie</p>
+        <h2>Hoodie</h2>
+        <h4>$39.99 <span>$74.99</span></h4>	
+        <div class="section-fluid">
+          <input class="desc-btn" type="radio" id="desc-1" name="desc-btn" checked/>
+          <label for="desc-1">Description</label> 
+          <input class="desc-btn" type="radio" id="desc-2" name="desc-btn"/>
+          <label for="desc-2">Details</label> 
+          <div class="section-fluid desc-sec accor-1">
+            <p>Découvrez notre sweat à capuche en coton doux, idéal pour une sensation décontractée et stylée. Personnalisez-le avec votre logo pour une touche unique. Confortable et durable, ce hoodie vous accompagnera avec élégance au quotidien. Affirmez votre style de manière personnelle et décontractée.</p>
+          </div>	
+          <div class="section-fluid desc-sec accor-2">
+            <div class="section-inline">
+              <p><span>76</span>cm<br>Lenght</p>
+            </div>	
+            <div class="section-inline">
+              <p><span>68</span>cm<br>Width</p>
+            </div>
+            <div class="section-inline">
+              <p><span>87</span>cm<br>Height</p>
+            </div>
+            <div class="section-inline">
+              <p><span>10</span>kg<br>Weight</p>
+            </div>
+          </div>	
+        </div>	
+        <h5>Choose Color:</h5>
+      </div>
+      <div class="clearfix"></div>
+      <input class="color-btn for-color-1" type="radio" id="color-1" name="color-btn" checked/>
+      <label class="first-color" for="color-1"></label> 
+      <input class="color-btn for-color-2" type="radio" id="color-2" name="color-btn"/>
+      <label class="color-2" for="color-2"></label> 
+      <input class="color-btn for-color-3" type="radio" id="color-3" name="color-btn"/>
+      <label class="color-3" for="color-3"></label> 
+      <input class="color-btn for-color-4" type="radio" id="color-4" name="color-btn"/>
+      <label class="color-4" for="color-4"></label> 
+      <input class="color-btn for-color-5" type="radio" id="color-5" name="color-btn"/>
+      <label class="color-5" for="color-5"></label> 
+      <input class="color-btn for-color-6" type="radio" id="color-6" name="color-btn"/>
+      <label class="color-6" for="color-6"></label> 
+      <div class="clearfix"></div>
+      <div class="info-wrap">
+      <!-- Shopify Button -->
+        <div id='product-component-1706054102466'></div>
+<script type="text/javascript">
+/*<![CDATA[*/
+(function () {
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  if (window.ShopifyBuy) {
+    if (window.ShopifyBuy.UI) {
+      ShopifyBuyInit();
+    } else {
+      loadScript();
+    }
+  } else {
+    loadScript();
+  }
+  function loadScript() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = scriptURL;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    script.onload = ShopifyBuyInit;
+  }
+  function ShopifyBuyInit() {
+    var client = ShopifyBuy.buildClient({
+      domain: 'ce2fbc.myshopify.com',
+      storefrontAccessToken: '439c1718c2eb10cbb7f6fe06328f10b3',
+    });
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      ui.createComponent('product', {
+        id: '9117199630655',
+        node: document.getElementById('product-component-1706054102466'),
+        moneyFormat: '%24%7B%7Bamount%7D%7D',
+        options: {
+  "product": {
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "calc(25% - 20px)",
+          "margin-left": "20px",
+          "margin-bottom": "50px"
+        }
+      },
+      "button": {
+        "font-size": "17px",
+        "padding-top": "16.5px",
+        "padding-bottom": "16.5px",
+        "border-radius": "8px"
+      },
+      "quantityInput": {
+        "font-size": "17px",
+        "padding-top": "16.5px",
+        "padding-bottom": "16.5px"
+      }
+    },
+    "buttonDestination": "checkout",
+    "contents": {
+      "img": false,
+      "title": false,
+      "price": false
+    },
+    "text": {
+      "button": "Buy now"
+    }
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-20px"
+        }
+      }
+    }
+  },
+  "modalProduct": {
+    "contents": {
+      "img": false,
+      "imgWithCarousel": true,
+      "button": false,
+      "buttonWithQuantity": true
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      },
+      "button": {
+        "font-size": "17px",
+        "padding-top": "16.5px",
+        "padding-bottom": "16.5px",
+        "border-radius": "8px"
+      },
+      "quantityInput": {
+        "font-size": "17px",
+        "padding-top": "16.5px",
+        "padding-bottom": "16.5px"
+      }
+    },
+    "text": {
+      "button": "Add to cart"
+    }
+  },
+  "option": {},
+  "cart": {
+    "styles": {
+      "button": {
+        "font-size": "17px",
+        "padding-top": "16.5px",
+        "padding-bottom": "16.5px",
+        "border-radius": "8px"
+      }
+    },
+    "text": {
+      "total": "Subtotal",
+      "button": "Checkout"
+    },
+    "popup": false
+  },
+  "toggle": {
+    "styles": {
+      "count": {
+        "font-size": "17px"
+      }
+    }
+  }
+},
+      });
+    });
+  }
+})();
+/*]]>*/
+</script>
+      </div>
+      <div class="img-wrap chair-1"></div>
+      <div class="img-wrap chair-2"></div>	
+      <div class="img-wrap chair-3"></div>
+      <div class="img-wrap chair-4"></div>
+      <div class="img-wrap chair-5"></div>
+      <div class="img-wrap chair-6"></div>		
+      <div class="back-color"></div>	
+      <div class="back-color chair-2"></div>	
+      <div class="back-color chair-3"></div>	
+      <div class="back-color chair-4"></div>	
+      <div class="back-color chair-5"></div>	
+      <div class="back-color chair-6"></div>	
+    </div>
+  </div>
+
+  <footer class="footer">
+    <!-- Your footer content goes here -->
+  </footer>
+<script>
+       //Remove blur Overlay
+      function removeOverlay() {
+          document.getElementById('blurOverlay').style.display = 'none';
+}
+</script>
+</body>
+</html>
+
