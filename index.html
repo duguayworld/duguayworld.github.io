@@ -399,32 +399,28 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         function closeNav() {
           document.getElementById("mySidebar").style.display = "none";
         }
+          document.getElementById('downloadButton').addEventListener('click', function() {
+          // Set the URL of the PDF file
+              var pdfUrl = 'media/cv_resume.pdf';
 
-        document.getElementById('downloadButton').addEventListener('click', function() {
-          // Get the HTML content of the entire page
-          var htmlContent = document.documentElement.outerHTML;
-
-          // Use html2pdf to convert HTML to PDF
-          html2pdf(htmlContent)
-            .then(function(pdf) {
-              // Create a link element
+          // Create a link element
               var a = document.createElement('a');
 
-              // Set the download attribute with a desired filename
-              a.download = 'webpage.pdf';
+          // Set the download attribute with a desired filename
+              a.download = 'cv_resume.pdf';
 
-              // Create a Blob from the PDF data and set it as the href attribute of the link
-              a.href = URL.createObjectURL(pdf);
+          // Set the href attribute to the URL of the PDF file
+              a.href = pdfUrl;
 
-              // Append the link to the document
+          // Append the link to the document
               document.body.appendChild(a);
 
-              // Click the link to trigger the download
+          // Click the link to trigger the download
               a.click();
 
-              // Remove the link from the document
+          // Remove the link from the document
               document.body.removeChild(a);
-            });
+          });
         });
     </script>
 
