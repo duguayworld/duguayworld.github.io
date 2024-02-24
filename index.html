@@ -388,41 +388,40 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- END PAGE CONTENT -->
 </div>
 
- <script>
+<script>
+    // Open and close sidebar
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "60%";
+        document.getElementById("mySidebar").style.display = "block";
+    }
 
-        // Open and close sidebar
-        function openNav() {
-          document.getElementById("mySidebar").style.width = "60%";
-          document.getElementById("mySidebar").style.display = "block";
-        }
+    function closeNav() {
+        document.getElementById("mySidebar").style.display = "none";
+    }
 
-        function closeNav() {
-          document.getElementById("mySidebar").style.display = "none";
-        }
-          document.getElementById('downloadButton').addEventListener('click', function() {
-          // Set the URL of the PDF file
-              var pdfUrl = 'media/cv_resume.pdf';
+    document.getElementById('downloadButton').addEventListener('click', function() {
+        // Set the URL of the PDF file
+        var pdfUrl = 'media/cv_resume.pdf';
 
-          // Create a link element
-              var a = document.createElement('a');
+        // Create a link element
+        var a = document.createElement('a');
 
-          // Set the download attribute with a desired filename
-              a.download = 'cv_resume.pdf';
+        // Set the download attribute with a desired filename
+        a.download = 'cv_resume.pdf';
 
-          // Set the href attribute to the URL of the PDF file
-              a.href = pdfUrl;
+        // Set the href attribute to the URL of the PDF file
+        a.href = pdfUrl;
 
-          // Append the link to the document
-              document.body.appendChild(a);
+        // Append the link to the document
+        document.body.appendChild(a);
 
-          // Click the link to trigger the download
-              a.click();
+        // Click the link to trigger the download
+        a.click();
 
-          // Remove the link from the document
-              document.body.removeChild(a);
-          });
-        });
-    </script>
+        // Remove the link from the document
+        document.body.removeChild(a);
+    });
+</script>
 
 </body>
 </html>
